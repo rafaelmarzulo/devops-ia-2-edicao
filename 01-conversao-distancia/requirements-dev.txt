@@ -1,0 +1,24 @@
+# Development and Testing Dependencies
+# Pin all versions for reproducible builds
+
+# Code Quality & Linting
+flake8==7.1.1
+ruff==0.8.4
+black==24.10.0
+isort==5.13.2
+
+# Testing
+pytest==8.3.4
+pytest-cov==6.0.0
+pytest-mock==3.14.0
+
+# Security & Vulnerability Scanning
+bandit==1.8.0
+safety==3.2.11
+
+# YAML Linting
+yamllint==1.35.1
+
+# Documentation
+sphinx==8.1.3
+sphinx-rtd-theme==3.0.2
