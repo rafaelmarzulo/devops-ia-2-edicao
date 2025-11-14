@@ -1,0 +1,32 @@
+  "mcpServers": {
+    "kubernetes": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "ALLOW_ONLY_NON_DESTRUCTIVE_TOOLS",
+        "-v",
+        "/home/fabricioveronez/.kube:/home/appuser/.kube",
+        "mcp/kubernetes"
+      ],
+      "env": {
+        "ALLOW_ONLY_NON_DESTRUCTIVE_TOOLS": "true"
+      }
+    },
+    "prometheus": {
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "-i",
+        "-e",
+        "PROMETHEUS_URL",
+        "fabriciosveronez/prometheus-mcp-server:v1"
+      ],
+      "env": {
+        "PROMETHEUS_URL": "http://134.199.177.16:80"
+      }
+    },
+}    
